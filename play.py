@@ -24,7 +24,7 @@ def play(choice):
         # Loops are used for each parameter for input validation
         # Game will otherwise crash if non-numeric value is entered
         while True:
-            height = input('Enter number of rows (1 - 25):')
+            height = input('Enter number of rows (1 - 25): ')
             if height.isnumeric():
                 # Maximum row count is 25
                 if int(height) < 1 or int(height) > 25:
@@ -34,7 +34,7 @@ def play(choice):
             else:
                 print('Invalid row count.')
         while True:
-            width = input('Enter number of columns (1 - 25):')
+            width = input('Enter number of columns (1 - 25): ')
             if width.isnumeric():
                 if int(width) < 1 or int(width) > 25:
                 # Maximum column count is 25
@@ -48,7 +48,7 @@ def play(choice):
         area = int(height) * int(width)
         while True:
             # 0 mine board is allowed in order for 1x1 board to exist
-            mines = input('Enter number of mines (0 - ' + str(area - 1) + '):')
+            mines = input('Enter number of mines (0 - ' + str(area - 1) + '): ')
             if mines.isnumeric:
                 if int(mines) < 0 or int(mines) > area - 1:
                     print('Invalid mine count.')
@@ -79,7 +79,7 @@ def play(choice):
         
         # Columns require unique input validation loop to check letter
         while True:
-            col = input('What column would you like to check? (A - ' + endcol + ')').upper()
+            col = input('What column would you like to check? (A - ' + endcol + ') ').upper()
             # Input must be not only alphabetical but also only one letter long
             if col.isalpha() and len(col) == 1:
                 if ord(col) - 64 < 1 or ord(col) - 64 > len(board[0]):
@@ -90,7 +90,7 @@ def play(choice):
                 print('Invalid column name.')
 
         while True:
-            row = input('What row would you like to check? (1 - ' + str(len(board)) + ')')
+            row = input('What row would you like to check? (1 - ' + str(len(board)) + ') ')
             if row.isnumeric():
                 if int(row) < 1 or int(row) > len(board):
                     print('Invalid row name.')
