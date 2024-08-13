@@ -13,7 +13,7 @@ print('5: Custom')
 
 # This loop will run for as long as the player wants to continue playing
 while True:
-    choice = input('Enter a number to select your difficulty or enter 0 to exit.')
+    choice = input('Enter a number to select your difficulty or enter 0 to exit. ')
     if choice == "1":
         play(1)
     elif choice == "2":
